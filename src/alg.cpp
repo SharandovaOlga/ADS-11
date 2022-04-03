@@ -16,7 +16,7 @@ int prior(char op) {
 int calcul(char o, int a, int b) {
   switch (o) {
     case '+': return (a + b);
-    case '-': return (a - b):
+    case '-': return (a - b);
     case '*': return (a * b);
     case '/':
       if (b != 0)
@@ -30,7 +30,7 @@ std::string infx2pstfx(std::string inf) {
     std::string result = "";
   for (int j = 0; j < inf.length(); j++) {
     char s = inf[j];
-    int sRrior = prior(s);
+    int sPrior = prior(s);
     if (sPrior == 4) {
       result += s;
       result += ' ';
