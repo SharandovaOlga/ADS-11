@@ -15,12 +15,12 @@ int prior(char op) {
 }
 int calcul(char o, int a, int b) {
   switch (o) {
-    case '+': return (a + b);
-    case '-': return (a - b);
-    case '*': return (a * b);
+    case '+': return (b + a);
+    case '-': return (b - a);
+    case '*': return (b * a);
     case '/':
-      if (b != 0)
-        return a / b;
+      if (a != 0)
+        return b / a;
     default: return 0;
   }
 }
